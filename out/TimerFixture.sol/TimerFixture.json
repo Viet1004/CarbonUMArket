@@ -1,0 +1,307 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "setUp",
+      "outputs": [
+        {
+          "internalType": "contract Timer",
+          "name": "timer",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b50610195806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c80630a9254e414610030575b600080fd5b610038610054565b6040516001600160a01b03909116815260200160405180910390f35b600060405161006290610084565b604051809103906000f08015801561007e573d6000803e3d6000fd5b50905090565b60cf806100918339019056fe608060405234801561001057600080fd5b504260005560ac806100236000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806322f8e56614603757806329cb924d146049575b600080fd5b60476042366004605e565b600055565b005b60005460405190815260200160405180910390f35b600060208284031215606f57600080fd5b503591905056fea2646970667358221220ac5277a6d951fefada8e9d179a43cc6317941f75cad69224364e3024cf39f58e64736f6c63430008100033a26469706673582212207d8871378c623a5dea15cfb24a39319d130f503849e860fc71f867f1c69297ba64736f6c63430008100033",
+    "sourceMap": "88:111:65:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c80630a9254e414610030575b600080fd5b610038610054565b6040516001600160a01b03909116815260200160405180910390f35b600060405161006290610084565b604051809103906000f08015801561007e573d6000803e3d6000fd5b50905090565b60cf806100918339019056fe608060405234801561001057600080fd5b504260005560ac806100236000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806322f8e56614603757806329cb924d146049575b600080fd5b60476042366004605e565b600055565b005b60005460405190815260200160405180910390f35b600060208284031215606f57600080fd5b503591905056fea2646970667358221220ac5277a6d951fefada8e9d179a43cc6317941f75cad69224364e3024cf39f58e64736f6c63430008100033a26469706673582212207d8871378c623a5dea15cfb24a39319d130f503849e860fc71f867f1c69297ba64736f6c63430008100033",
+    "sourceMap": "88:111:65:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;116:81;;;:::i;:::-;;;-1:-1:-1;;;;;193:32:69;;;175:51;;163:2;148:18;116:81:65;;;;;;;;149:11;179;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;172:18;;116:81;:::o;-1:-1:-1:-;;;;;;;;:::o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "setUp()": "0a9254e4"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"setUp\",\"outputs\":[{\"internalType\":\"contract Timer\",\"name\":\"timer\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/fixtures/common/TimerFixture.sol\":\"TimerFixture\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@across-protocol/=node_modules/@across-protocol/\",\":@ensdomains/=node_modules/@ensdomains/\",\":@eth-optimism/=node_modules/@across-protocol/contracts/node_modules/@eth-optimism/\",\":@gnosis.pm/=node_modules/@gnosis.pm/\",\":@maticnetwork/=node_modules/@maticnetwork/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@uma/=node_modules/@uma/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@uma/core/contracts/common/implementation/Timer.sol\":{\"keccak256\":\"0x9e0dd7389718bd5d1da910273a6f4cee98ee22bfc0c92bde0f0955c0e23adb5e\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://7ddac8d3cb76f8811156a11a7702d7c05b15a0f18c22b5abdc318723193f9266\",\"dweb:/ipfs/QmPxL7AU8NkURJaZ6WxXNcw88wGMSoPX4jbt7SMdPJqtYv\"]},\"test/fixtures/common/TimerFixture.sol\":{\"keccak256\":\"0x9f0b735cb4d2d494d670be9875082c9e7944e4e9e1989a99524b9dffbddeb9cb\",\"urls\":[\"bzz-raw://a2e53b878c9f8bdc88cb91cfb1b1631d1fec6d7c3009a1954e3215989c05d937\",\"dweb:/ipfs/QmRSi291avEMxygy47inL8VXCyJ4PSgqvx9iRZwbo19rnx\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.16+commit.07a7930e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setUp",
+          "outputs": [
+            {
+              "internalType": "contract Timer",
+              "name": "timer",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@across-protocol/=node_modules/@across-protocol/",
+        "@ensdomains/=node_modules/@ensdomains/",
+        "@eth-optimism/=node_modules/@across-protocol/contracts/node_modules/@eth-optimism/",
+        "@gnosis.pm/=node_modules/@gnosis.pm/",
+        "@maticnetwork/=node_modules/@maticnetwork/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@uma/=node_modules/@uma/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/fixtures/common/TimerFixture.sol": "TimerFixture"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@uma/core/contracts/common/implementation/Timer.sol": {
+        "keccak256": "0x9e0dd7389718bd5d1da910273a6f4cee98ee22bfc0c92bde0f0955c0e23adb5e",
+        "urls": [
+          "bzz-raw://7ddac8d3cb76f8811156a11a7702d7c05b15a0f18c22b5abdc318723193f9266",
+          "dweb:/ipfs/QmPxL7AU8NkURJaZ6WxXNcw88wGMSoPX4jbt7SMdPJqtYv"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "test/fixtures/common/TimerFixture.sol": {
+        "keccak256": "0x9f0b735cb4d2d494d670be9875082c9e7944e4e9e1989a99524b9dffbddeb9cb",
+        "urls": [
+          "bzz-raw://a2e53b878c9f8bdc88cb91cfb1b1631d1fec6d7c3009a1954e3215989c05d937",
+          "dweb:/ipfs/QmRSi291avEMxygy47inL8VXCyJ4PSgqvx9iRZwbo19rnx"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/fixtures/common/TimerFixture.sol",
+    "id": 55160,
+    "exportedSymbols": {
+      "Timer": [
+        49440
+      ],
+      "TimerFixture": [
+        55159
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "0:200:65",
+    "nodes": [
+      {
+        "id": 55145,
+        "nodeType": "PragmaDirective",
+        "src": "0:23:65",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".16"
+        ]
+      },
+      {
+        "id": 55146,
+        "nodeType": "ImportDirective",
+        "src": "25:61:65",
+        "nodes": [],
+        "absolutePath": "node_modules/@uma/core/contracts/common/implementation/Timer.sol",
+        "file": "@uma/core/contracts/common/implementation/Timer.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 55160,
+        "sourceUnit": 49441,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 55159,
+        "nodeType": "ContractDefinition",
+        "src": "88:111:65",
+        "nodes": [
+          {
+            "id": 55158,
+            "nodeType": "FunctionDefinition",
+            "src": "116:81:65",
+            "nodes": [],
+            "body": {
+              "id": 55157,
+              "nodeType": "Block",
+              "src": "162:35:65",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 55154,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "179:9:65",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_Timer_$49440_$",
+                        "typeString": "function () returns (contract Timer)"
+                      },
+                      "typeName": {
+                        "id": 55153,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 55152,
+                          "name": "Timer",
+                          "nameLocations": [
+                            "183:5:65"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 49440,
+                          "src": "183:5:65"
+                        },
+                        "referencedDeclaration": 49440,
+                        "src": "183:5:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Timer_$49440",
+                          "typeString": "contract Timer"
+                        }
+                      }
+                    },
+                    "id": 55155,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "179:11:65",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Timer_$49440",
+                      "typeString": "contract Timer"
+                    }
+                  },
+                  "functionReturnParameters": 55151,
+                  "id": 55156,
+                  "nodeType": "Return",
+                  "src": "172:18:65"
+                }
+              ]
+            },
+            "functionSelector": "0a9254e4",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUp",
+            "nameLocation": "125:5:65",
+            "parameters": {
+              "id": 55147,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "130:2:65"
+            },
+            "returnParameters": {
+              "id": 55151,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 55150,
+                  "mutability": "mutable",
+                  "name": "timer",
+                  "nameLocation": "155:5:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55158,
+                  "src": "149:11:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Timer_$49440",
+                    "typeString": "contract Timer"
+                  },
+                  "typeName": {
+                    "id": 55149,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 55148,
+                      "name": "Timer",
+                      "nameLocations": [
+                        "149:5:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 49440,
+                      "src": "149:5:65"
+                    },
+                    "referencedDeclaration": 49440,
+                    "src": "149:5:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Timer_$49440",
+                      "typeString": "contract Timer"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "148:13:65"
+            },
+            "scope": 55159,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "TimerFixture",
+        "contractDependencies": [
+          49440
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          55159
+        ],
+        "name": "TimerFixture",
+        "nameLocation": "97:12:65",
+        "scope": 55160,
+        "usedErrors": []
+      }
+    ]
+  },
+  "id": 65
+}

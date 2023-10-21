@@ -1,0 +1,507 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newElement",
+          "type": "address"
+        }
+      ],
+      "name": "addToWhitelist",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getWhitelist",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newElement",
+          "type": "address"
+        }
+      ],
+      "name": "isOnWhitelist",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newElement",
+          "type": "address"
+        }
+      ],
+      "name": "removeFromWhitelist",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addToWhitelist(address)": "e43252d7",
+    "getWhitelist()": "d01f63f5",
+    "isOnWhitelist(address)": "3a3ab672",
+    "removeFromWhitelist(address)": "8ab1d681"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newElement\",\"type\":\"address\"}],\"name\":\"addToWhitelist\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getWhitelist\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newElement\",\"type\":\"address\"}],\"name\":\"isOnWhitelist\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newElement\",\"type\":\"address\"}],\"name\":\"removeFromWhitelist\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@uma/core/contracts/common/interfaces/AddressWhitelistInterface.sol\":\"AddressWhitelistInterface\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@across-protocol/=node_modules/@across-protocol/\",\":@ensdomains/=node_modules/@ensdomains/\",\":@eth-optimism/=node_modules/@across-protocol/contracts/node_modules/@eth-optimism/\",\":@gnosis.pm/=node_modules/@gnosis.pm/\",\":@maticnetwork/=node_modules/@maticnetwork/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@uma/=node_modules/@uma/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@uma/core/contracts/common/interfaces/AddressWhitelistInterface.sol\":{\"keccak256\":\"0x22fb8588dff1d5cff76a28111d6c9b190765d99facd93c8ff3b54771f245c0d8\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://5ecd993f00de290a3c7bf21da23a9439cf2ccb22028316df92b79780ac8aa533\",\"dweb:/ipfs/QmTZ7x7U4EEzTacqapzSdFs2np5WNsqm4XeUBqzQxxDJei\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.16+commit.07a7930e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "newElement",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "addToWhitelist"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getWhitelist",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "newElement",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isOnWhitelist",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "newElement",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "removeFromWhitelist"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@across-protocol/=node_modules/@across-protocol/",
+        "@ensdomains/=node_modules/@ensdomains/",
+        "@eth-optimism/=node_modules/@across-protocol/contracts/node_modules/@eth-optimism/",
+        "@gnosis.pm/=node_modules/@gnosis.pm/",
+        "@maticnetwork/=node_modules/@maticnetwork/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@uma/=node_modules/@uma/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@uma/core/contracts/common/interfaces/AddressWhitelistInterface.sol": "AddressWhitelistInterface"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@uma/core/contracts/common/interfaces/AddressWhitelistInterface.sol": {
+        "keccak256": "0x22fb8588dff1d5cff76a28111d6c9b190765d99facd93c8ff3b54771f245c0d8",
+        "urls": [
+          "bzz-raw://5ecd993f00de290a3c7bf21da23a9439cf2ccb22028316df92b79780ac8aa533",
+          "dweb:/ipfs/QmTZ7x7U4EEzTacqapzSdFs2np5WNsqm4XeUBqzQxxDJei"
+        ],
+        "license": "AGPL-3.0-only"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@uma/core/contracts/common/interfaces/AddressWhitelistInterface.sol",
+    "id": 49566,
+    "exportedSymbols": {
+      "AddressWhitelistInterface": [
+        49565
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:336:39",
+    "nodes": [
+      {
+        "id": 49541,
+        "nodeType": "PragmaDirective",
+        "src": "42:23:39",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 49565,
+        "nodeType": "ContractDefinition",
+        "src": "67:310:39",
+        "nodes": [
+          {
+            "id": 49546,
+            "nodeType": "FunctionDefinition",
+            "src": "109:53:39",
+            "nodes": [],
+            "functionSelector": "e43252d7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addToWhitelist",
+            "nameLocation": "118:14:39",
+            "parameters": {
+              "id": 49544,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 49543,
+                  "mutability": "mutable",
+                  "name": "newElement",
+                  "nameLocation": "141:10:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49546,
+                  "src": "133:18:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 49542,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "133:7:39",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "132:20:39"
+            },
+            "returnParameters": {
+              "id": 49545,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "161:0:39"
+            },
+            "scope": 49565,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 49551,
+            "nodeType": "FunctionDefinition",
+            "src": "168:58:39",
+            "nodes": [],
+            "functionSelector": "8ab1d681",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeFromWhitelist",
+            "nameLocation": "177:19:39",
+            "parameters": {
+              "id": 49549,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 49548,
+                  "mutability": "mutable",
+                  "name": "newElement",
+                  "nameLocation": "205:10:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49551,
+                  "src": "197:18:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 49547,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "197:7:39",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "196:20:39"
+            },
+            "returnParameters": {
+              "id": 49550,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "225:0:39"
+            },
+            "scope": 49565,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 49558,
+            "nodeType": "FunctionDefinition",
+            "src": "232:72:39",
+            "nodes": [],
+            "functionSelector": "3a3ab672",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isOnWhitelist",
+            "nameLocation": "241:13:39",
+            "parameters": {
+              "id": 49554,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 49553,
+                  "mutability": "mutable",
+                  "name": "newElement",
+                  "nameLocation": "263:10:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49558,
+                  "src": "255:18:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 49552,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "255:7:39",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "254:20:39"
+            },
+            "returnParameters": {
+              "id": 49557,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 49556,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49558,
+                  "src": "298:4:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 49555,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "298:4:39",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "297:6:39"
+            },
+            "scope": 49565,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 49564,
+            "nodeType": "FunctionDefinition",
+            "src": "310:65:39",
+            "nodes": [],
+            "functionSelector": "d01f63f5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getWhitelist",
+            "nameLocation": "319:12:39",
+            "parameters": {
+              "id": 49559,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "331:2:39"
+            },
+            "returnParameters": {
+              "id": 49563,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 49562,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49564,
+                  "src": "357:16:39",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 49560,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "357:7:39",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 49561,
+                    "nodeType": "ArrayTypeName",
+                    "src": "357:9:39",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "356:18:39"
+            },
+            "scope": 49565,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "AddressWhitelistInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          49565
+        ],
+        "name": "AddressWhitelistInterface",
+        "nameLocation": "77:25:39",
+        "scope": 49566,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-only"
+  },
+  "id": 39
+}

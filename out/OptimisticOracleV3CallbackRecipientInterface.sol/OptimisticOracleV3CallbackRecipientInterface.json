@@ -1,0 +1,362 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "assertionId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "assertionDisputedCallback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "assertionId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bool",
+          "name": "assertedTruthfully",
+          "type": "bool"
+        }
+      ],
+      "name": "assertionResolvedCallback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "assertionDisputedCallback(bytes32)": "d448a4ec",
+    "assertionResolvedCallback(bytes32,bool)": "f1b156b2"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"assertionId\",\"type\":\"bytes32\"}],\"name\":\"assertionDisputedCallback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"assertionId\",\"type\":\"bytes32\"},{\"internalType\":\"bool\",\"name\":\"assertedTruthfully\",\"type\":\"bool\"}],\"name\":\"assertionResolvedCallback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"assertionDisputedCallback(bytes32)\":{\"params\":{\"assertionId\":\"The identifier of the assertion that was disputed.\"}},\"assertionResolvedCallback(bytes32,bool)\":{\"params\":{\"assertedTruthfully\":\"Whether the assertion was resolved as truthful or not.\",\"assertionId\":\"The identifier of the assertion that was resolved.\"}}},\"title\":\"Optimistic Oracle V3 Callback Recipient Interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"assertionDisputedCallback(bytes32)\":{\"notice\":\"Callback function that is called by Optimistic Oracle V3 when an assertion is disputed.\"},\"assertionResolvedCallback(bytes32,bool)\":{\"notice\":\"Callback function that is called by Optimistic Oracle V3 when an assertion is resolved.\"}},\"notice\":\"Interface for contracts implementing callbacks to be received from the Optimistic Oracle V3.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/OptimisticOracleV3CallbackRecipientInterface.sol\":\"OptimisticOracleV3CallbackRecipientInterface\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@across-protocol/=node_modules/@across-protocol/\",\":@ensdomains/=node_modules/@ensdomains/\",\":@eth-optimism/=node_modules/@across-protocol/contracts/node_modules/@eth-optimism/\",\":@gnosis.pm/=node_modules/@gnosis.pm/\",\":@maticnetwork/=node_modules/@maticnetwork/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@uma/=node_modules/@uma/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/OptimisticOracleV3CallbackRecipientInterface.sol\":{\"keccak256\":\"0x79f90bc84ed5d394380e99f0a5d1b219abd9016bc3a02fad0099014af08af03e\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://dc1b7b847eb711750bc76ab45a13294b05fc09e361294a6bdffb90cb15f50b63\",\"dweb:/ipfs/QmQSs2R7mmGojGdNkqP75Vf7LajRkfJ1oGuYAUCHYGmPEQ\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.16+commit.07a7930e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "assertionId",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "assertionDisputedCallback"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "assertionId",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bool",
+              "name": "assertedTruthfully",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "assertionResolvedCallback"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "assertionDisputedCallback(bytes32)": {
+            "params": {
+              "assertionId": "The identifier of the assertion that was disputed."
+            }
+          },
+          "assertionResolvedCallback(bytes32,bool)": {
+            "params": {
+              "assertedTruthfully": "Whether the assertion was resolved as truthful or not.",
+              "assertionId": "The identifier of the assertion that was resolved."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "assertionDisputedCallback(bytes32)": {
+            "notice": "Callback function that is called by Optimistic Oracle V3 when an assertion is disputed."
+          },
+          "assertionResolvedCallback(bytes32,bool)": {
+            "notice": "Callback function that is called by Optimistic Oracle V3 when an assertion is resolved."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@across-protocol/=node_modules/@across-protocol/",
+        "@ensdomains/=node_modules/@ensdomains/",
+        "@eth-optimism/=node_modules/@across-protocol/contracts/node_modules/@eth-optimism/",
+        "@gnosis.pm/=node_modules/@gnosis.pm/",
+        "@maticnetwork/=node_modules/@maticnetwork/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@uma/=node_modules/@uma/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/OptimisticOracleV3CallbackRecipientInterface.sol": "OptimisticOracleV3CallbackRecipientInterface"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/OptimisticOracleV3CallbackRecipientInterface.sol": {
+        "keccak256": "0x79f90bc84ed5d394380e99f0a5d1b219abd9016bc3a02fad0099014af08af03e",
+        "urls": [
+          "bzz-raw://dc1b7b847eb711750bc76ab45a13294b05fc09e361294a6bdffb90cb15f50b63",
+          "dweb:/ipfs/QmQSs2R7mmGojGdNkqP75Vf7LajRkfJ1oGuYAUCHYGmPEQ"
+        ],
+        "license": "AGPL-3.0-only"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/OptimisticOracleV3CallbackRecipientInterface.sol",
+    "id": 52231,
+    "exportedSymbols": {
+      "OptimisticOracleV3CallbackRecipientInterface": [
+        52230
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:903:55",
+    "nodes": [
+      {
+        "id": 52214,
+        "nodeType": "PragmaDirective",
+        "src": "42:24:55",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".16"
+        ]
+      },
+      {
+        "id": 52230,
+        "nodeType": "ContractDefinition",
+        "src": "240:704:55",
+        "nodes": [
+          {
+            "id": 52223,
+            "nodeType": "FunctionDefinition",
+            "src": "585:90:55",
+            "nodes": [],
+            "documentation": {
+              "id": 52216,
+              "nodeType": "StructuredDocumentation",
+              "src": "301:279:55",
+              "text": " @notice Callback function that is called by Optimistic Oracle V3 when an assertion is resolved.\n @param assertionId The identifier of the assertion that was resolved.\n @param assertedTruthfully Whether the assertion was resolved as truthful or not."
+            },
+            "functionSelector": "f1b156b2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "assertionResolvedCallback",
+            "nameLocation": "594:25:55",
+            "parameters": {
+              "id": 52221,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52218,
+                  "mutability": "mutable",
+                  "name": "assertionId",
+                  "nameLocation": "628:11:55",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52223,
+                  "src": "620:19:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 52217,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "620:7:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52220,
+                  "mutability": "mutable",
+                  "name": "assertedTruthfully",
+                  "nameLocation": "646:18:55",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52223,
+                  "src": "641:23:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 52219,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "641:4:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "619:46:55"
+            },
+            "returnParameters": {
+              "id": 52222,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "674:0:55"
+            },
+            "scope": 52230,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52229,
+            "nodeType": "FunctionDefinition",
+            "src": "877:65:55",
+            "nodes": [],
+            "documentation": {
+              "id": 52224,
+              "nodeType": "StructuredDocumentation",
+              "src": "681:191:55",
+              "text": " @notice Callback function that is called by Optimistic Oracle V3 when an assertion is disputed.\n @param assertionId The identifier of the assertion that was disputed."
+            },
+            "functionSelector": "d448a4ec",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "assertionDisputedCallback",
+            "nameLocation": "886:25:55",
+            "parameters": {
+              "id": 52227,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52226,
+                  "mutability": "mutable",
+                  "name": "assertionId",
+                  "nameLocation": "920:11:55",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52229,
+                  "src": "912:19:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 52225,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "912:7:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "911:21:55"
+            },
+            "returnParameters": {
+              "id": 52228,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "941:0:55"
+            },
+            "scope": 52230,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "OptimisticOracleV3CallbackRecipientInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 52215,
+          "nodeType": "StructuredDocumentation",
+          "src": "68:171:55",
+          "text": " @title Optimistic Oracle V3 Callback Recipient Interface\n @notice Interface for contracts implementing callbacks to be received from the Optimistic Oracle V3."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          52230
+        ],
+        "name": "OptimisticOracleV3CallbackRecipientInterface",
+        "nameLocation": "250:44:55",
+        "scope": 52231,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-only"
+  },
+  "id": 55
+}

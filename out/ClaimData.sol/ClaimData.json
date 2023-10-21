@@ -1,0 +1,65 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "node_modules/@uma/core/contracts/optimistic-oracle-v3/implementation/ClaimData.sol",
+    "id": 50729,
+    "exportedSymbols": {
+      "ClaimData": [
+        46643
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:118:50",
+    "nodes": [
+      {
+        "id": 50726,
+        "nodeType": "PragmaDirective",
+        "src": "42:24:50",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".16"
+        ]
+      },
+      {
+        "id": 50728,
+        "nodeType": "ImportDirective",
+        "src": "68:91:50",
+        "nodes": [],
+        "absolutePath": "node_modules/@uma/core/contracts/common/implementation/AncillaryData.sol",
+        "file": "../../common/implementation/AncillaryData.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 50729,
+        "sourceUnit": 46644,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 50727,
+              "name": "AncillaryData",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 46643,
+              "src": "77:13:50",
+              "typeDescriptions": {}
+            },
+            "local": "ClaimData",
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      }
+    ],
+    "license": "AGPL-3.0-only"
+  },
+  "id": 50
+}

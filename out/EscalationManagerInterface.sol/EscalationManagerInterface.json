@@ -1,0 +1,1133 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "assertionId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "assertionDisputedCallback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "assertionId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bool",
+          "name": "assertedTruthfully",
+          "type": "bool"
+        }
+      ],
+      "name": "assertionResolvedCallback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "assertionId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getAssertionPolicy",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "blockAssertion",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "arbitrateViaEscalationManager",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "discardOracle",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "validateDisputers",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct EscalationManagerInterface.AssertionPolicy",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "identifier",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "time",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "ancillaryData",
+          "type": "bytes"
+        }
+      ],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "assertionId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "disputeCaller",
+          "type": "address"
+        }
+      ],
+      "name": "isDisputeAllowed",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "identifier",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "time",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "ancillaryData",
+          "type": "bytes"
+        }
+      ],
+      "name": "requestPrice",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "assertionDisputedCallback(bytes32)": "d448a4ec",
+    "assertionResolvedCallback(bytes32,bool)": "f1b156b2",
+    "getAssertionPolicy(bytes32)": "a6b011a7",
+    "getPrice(bytes32,uint256,bytes)": "719c6d56",
+    "isDisputeAllowed(bytes32,address)": "6b915d91",
+    "requestPrice(bytes32,uint256,bytes)": "216666a4"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"assertionId\",\"type\":\"bytes32\"}],\"name\":\"assertionDisputedCallback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"assertionId\",\"type\":\"bytes32\"},{\"internalType\":\"bool\",\"name\":\"assertedTruthfully\",\"type\":\"bool\"}],\"name\":\"assertionResolvedCallback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"assertionId\",\"type\":\"bytes32\"}],\"name\":\"getAssertionPolicy\",\"outputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"blockAssertion\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"arbitrateViaEscalationManager\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"discardOracle\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"validateDisputers\",\"type\":\"bool\"}],\"internalType\":\"struct EscalationManagerInterface.AssertionPolicy\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"identifier\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"ancillaryData\",\"type\":\"bytes\"}],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"assertionId\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"disputeCaller\",\"type\":\"address\"}],\"name\":\"isDisputeAllowed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"identifier\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"ancillaryData\",\"type\":\"bytes\"}],\"name\":\"requestPrice\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"assertionDisputedCallback(bytes32)\":{\"params\":{\"assertionId\":\"The identifier of the assertion that was disputed.\"}},\"assertionResolvedCallback(bytes32,bool)\":{\"params\":{\"assertedTruthfully\":\"Whether the assertion was resolved as truthful or not.\",\"assertionId\":\"The identifier of the assertion that was resolved.\"}},\"getAssertionPolicy(bytes32)\":{\"params\":{\"assertionId\":\"the assertion identifier to get the assertion policy for.\"},\"returns\":{\"_0\":\"the assertion policy for the given assertion identifier.\"}},\"getPrice(bytes32,uint256,bytes)\":{\"params\":{\"ancillaryData\":\"ancillary data of the price being requested.\",\"identifier\":\"price identifier being requested.\",\"time\":\"timestamp of the price being requested.\"},\"returns\":{\"_0\":\"price from the escalation manager to inform the resolution of the dispute.\"}},\"isDisputeAllowed(bytes32,address)\":{\"params\":{\"assertionId\":\"the assertionId to validate the dispute for.\",\"disputeCaller\":\"the caller of the dispute function.\"},\"returns\":{\"_0\":\"bool true if the dispute is allowed, false otherwise.\"}},\"requestPrice(bytes32,uint256,bytes)\":{\"params\":{\"ancillaryData\":\"ancillary data of the price being requested.\",\"identifier\":\"the identifier to fetch the price for.\",\"time\":\"the time to fetch the price for.\"}}},\"title\":\"Escalation Manager Interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"assertionDisputedCallback(bytes32)\":{\"notice\":\"Callback function that is called by Optimistic Oracle V3 when an assertion is disputed.\"},\"assertionResolvedCallback(bytes32,bool)\":{\"notice\":\"Callback function that is called by Optimistic Oracle V3 when an assertion is resolved.\"},\"getAssertionPolicy(bytes32)\":{\"notice\":\"Returns the assertion policy for the given assertion.\"},\"getPrice(bytes32,uint256,bytes)\":{\"notice\":\"Implements price getting logic. This method is called by Optimistic Oracle V3 settling an assertion that is configured to use the escalation manager as the oracle. The interface is constructed to mimic the UMA DVM.\"},\"isDisputeAllowed(bytes32,address)\":{\"notice\":\"Callback function that is called by Optimistic Oracle V3 when an assertion is disputed. Used to validate if the dispute should be allowed based on the escalation policy.\"},\"requestPrice(bytes32,uint256,bytes)\":{\"notice\":\"Implements price requesting logic for the escalation manager. This function is called by the Optimistic Oracle V3 on dispute and is constructed to mimic that of the UMA DVM interface.\"}},\"notice\":\"Interface for contracts that manage the escalation policy for assertions.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/EscalationManagerInterface.sol\":\"EscalationManagerInterface\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@across-protocol/=node_modules/@across-protocol/\",\":@ensdomains/=node_modules/@ensdomains/\",\":@eth-optimism/=node_modules/@across-protocol/contracts/node_modules/@eth-optimism/\",\":@gnosis.pm/=node_modules/@gnosis.pm/\",\":@maticnetwork/=node_modules/@maticnetwork/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@uma/=node_modules/@uma/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/EscalationManagerInterface.sol\":{\"keccak256\":\"0xce31adf62ae47468bab181bf1137b05e8ac0a003f019c343ac137a76ea32efc7\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://eb1b93b648adf4130fdfe7a62d817cda0519e7760a50b90f16a3c46cee4c0967\",\"dweb:/ipfs/QmNPD4TRAm9kqqQDKQabqZgaorkJNov96iLgxsm5HRTSZN\"]},\"node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/OptimisticOracleV3CallbackRecipientInterface.sol\":{\"keccak256\":\"0x79f90bc84ed5d394380e99f0a5d1b219abd9016bc3a02fad0099014af08af03e\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://dc1b7b847eb711750bc76ab45a13294b05fc09e361294a6bdffb90cb15f50b63\",\"dweb:/ipfs/QmQSs2R7mmGojGdNkqP75Vf7LajRkfJ1oGuYAUCHYGmPEQ\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.16+commit.07a7930e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "assertionId",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "assertionDisputedCallback"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "assertionId",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bool",
+              "name": "assertedTruthfully",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "assertionResolvedCallback"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "assertionId",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAssertionPolicy",
+          "outputs": [
+            {
+              "internalType": "struct EscalationManagerInterface.AssertionPolicy",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "bool",
+                  "name": "blockAssertion",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "arbitrateViaEscalationManager",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "discardOracle",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "validateDisputers",
+                  "type": "bool"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "identifier",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "ancillaryData",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "getPrice",
+          "outputs": [
+            {
+              "internalType": "int256",
+              "name": "",
+              "type": "int256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "assertionId",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "address",
+              "name": "disputeCaller",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isDisputeAllowed",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "identifier",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "ancillaryData",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "requestPrice"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "assertionDisputedCallback(bytes32)": {
+            "params": {
+              "assertionId": "The identifier of the assertion that was disputed."
+            }
+          },
+          "assertionResolvedCallback(bytes32,bool)": {
+            "params": {
+              "assertedTruthfully": "Whether the assertion was resolved as truthful or not.",
+              "assertionId": "The identifier of the assertion that was resolved."
+            }
+          },
+          "getAssertionPolicy(bytes32)": {
+            "params": {
+              "assertionId": "the assertion identifier to get the assertion policy for."
+            },
+            "returns": {
+              "_0": "the assertion policy for the given assertion identifier."
+            }
+          },
+          "getPrice(bytes32,uint256,bytes)": {
+            "params": {
+              "ancillaryData": "ancillary data of the price being requested.",
+              "identifier": "price identifier being requested.",
+              "time": "timestamp of the price being requested."
+            },
+            "returns": {
+              "_0": "price from the escalation manager to inform the resolution of the dispute."
+            }
+          },
+          "isDisputeAllowed(bytes32,address)": {
+            "params": {
+              "assertionId": "the assertionId to validate the dispute for.",
+              "disputeCaller": "the caller of the dispute function."
+            },
+            "returns": {
+              "_0": "bool true if the dispute is allowed, false otherwise."
+            }
+          },
+          "requestPrice(bytes32,uint256,bytes)": {
+            "params": {
+              "ancillaryData": "ancillary data of the price being requested.",
+              "identifier": "the identifier to fetch the price for.",
+              "time": "the time to fetch the price for."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "assertionDisputedCallback(bytes32)": {
+            "notice": "Callback function that is called by Optimistic Oracle V3 when an assertion is disputed."
+          },
+          "assertionResolvedCallback(bytes32,bool)": {
+            "notice": "Callback function that is called by Optimistic Oracle V3 when an assertion is resolved."
+          },
+          "getAssertionPolicy(bytes32)": {
+            "notice": "Returns the assertion policy for the given assertion."
+          },
+          "getPrice(bytes32,uint256,bytes)": {
+            "notice": "Implements price getting logic. This method is called by Optimistic Oracle V3 settling an assertion that is configured to use the escalation manager as the oracle. The interface is constructed to mimic the UMA DVM."
+          },
+          "isDisputeAllowed(bytes32,address)": {
+            "notice": "Callback function that is called by Optimistic Oracle V3 when an assertion is disputed. Used to validate if the dispute should be allowed based on the escalation policy."
+          },
+          "requestPrice(bytes32,uint256,bytes)": {
+            "notice": "Implements price requesting logic for the escalation manager. This function is called by the Optimistic Oracle V3 on dispute and is constructed to mimic that of the UMA DVM interface."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@across-protocol/=node_modules/@across-protocol/",
+        "@ensdomains/=node_modules/@ensdomains/",
+        "@eth-optimism/=node_modules/@across-protocol/contracts/node_modules/@eth-optimism/",
+        "@gnosis.pm/=node_modules/@gnosis.pm/",
+        "@maticnetwork/=node_modules/@maticnetwork/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@uma/=node_modules/@uma/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/EscalationManagerInterface.sol": "EscalationManagerInterface"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/EscalationManagerInterface.sol": {
+        "keccak256": "0xce31adf62ae47468bab181bf1137b05e8ac0a003f019c343ac137a76ea32efc7",
+        "urls": [
+          "bzz-raw://eb1b93b648adf4130fdfe7a62d817cda0519e7760a50b90f16a3c46cee4c0967",
+          "dweb:/ipfs/QmNPD4TRAm9kqqQDKQabqZgaorkJNov96iLgxsm5HRTSZN"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/OptimisticOracleV3CallbackRecipientInterface.sol": {
+        "keccak256": "0x79f90bc84ed5d394380e99f0a5d1b219abd9016bc3a02fad0099014af08af03e",
+        "urls": [
+          "bzz-raw://dc1b7b847eb711750bc76ab45a13294b05fc09e361294a6bdffb90cb15f50b63",
+          "dweb:/ipfs/QmQSs2R7mmGojGdNkqP75Vf7LajRkfJ1oGuYAUCHYGmPEQ"
+        ],
+        "license": "AGPL-3.0-only"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/EscalationManagerInterface.sol",
+    "id": 52213,
+    "exportedSymbols": {
+      "EscalationManagerInterface": [
+        52212
+      ],
+      "OptimisticOracleV3CallbackRecipientInterface": [
+        52230
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:2874:54",
+    "nodes": [
+      {
+        "id": 52157,
+        "nodeType": "PragmaDirective",
+        "src": "42:23:54",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".16"
+        ]
+      },
+      {
+        "id": 52158,
+        "nodeType": "ImportDirective",
+        "src": "67:60:54",
+        "nodes": [],
+        "absolutePath": "node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/OptimisticOracleV3CallbackRecipientInterface.sol",
+        "file": "./OptimisticOracleV3CallbackRecipientInterface.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 52213,
+        "sourceUnit": 52231,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 52212,
+        "nodeType": "ContractDefinition",
+        "src": "261:2654:54",
+        "nodes": [
+          {
+            "id": 52170,
+            "nodeType": "StructDefinition",
+            "src": "426:411:54",
+            "nodes": [],
+            "canonicalName": "EscalationManagerInterface.AssertionPolicy",
+            "members": [
+              {
+                "constant": false,
+                "id": 52163,
+                "mutability": "mutable",
+                "name": "blockAssertion",
+                "nameLocation": "464:14:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 52170,
+                "src": "459:19:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 52162,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "459:4:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 52165,
+                "mutability": "mutable",
+                "name": "arbitrateViaEscalationManager",
+                "nameLocation": "542:29:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 52170,
+                "src": "537:34:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 52164,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "537:4:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 52167,
+                "mutability": "mutable",
+                "name": "discardOracle",
+                "nameLocation": "651:13:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 52170,
+                "src": "646:18:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 52166,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "646:4:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 52169,
+                "mutability": "mutable",
+                "name": "validateDisputers",
+                "nameLocation": "749:17:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 52170,
+                "src": "744:22:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 52168,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "744:4:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "AssertionPolicy",
+            "nameLocation": "433:15:54",
+            "scope": 52212,
+            "visibility": "public"
+          },
+          {
+            "id": 52179,
+            "nodeType": "FunctionDefinition",
+            "src": "1084:96:54",
+            "nodes": [],
+            "documentation": {
+              "id": 52171,
+              "nodeType": "StructuredDocumentation",
+              "src": "843:236:54",
+              "text": " @notice Returns the assertion policy for the given assertion.\n @param assertionId the assertion identifier to get the assertion policy for.\n @return the assertion policy for the given assertion identifier."
+            },
+            "functionSelector": "a6b011a7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAssertionPolicy",
+            "nameLocation": "1093:18:54",
+            "parameters": {
+              "id": 52174,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52173,
+                  "mutability": "mutable",
+                  "name": "assertionId",
+                  "nameLocation": "1120:11:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52179,
+                  "src": "1112:19:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 52172,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1112:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1111:21:54"
+            },
+            "returnParameters": {
+              "id": 52178,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52177,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52179,
+                  "src": "1156:22:54",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AssertionPolicy_$52170_memory_ptr",
+                    "typeString": "struct EscalationManagerInterface.AssertionPolicy"
+                  },
+                  "typeName": {
+                    "id": 52176,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 52175,
+                      "name": "AssertionPolicy",
+                      "nameLocations": [
+                        "1156:15:54"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 52170,
+                      "src": "1156:15:54"
+                    },
+                    "referencedDeclaration": 52170,
+                    "src": "1156:15:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AssertionPolicy_$52170_storage_ptr",
+                      "typeString": "struct EscalationManagerInterface.AssertionPolicy"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1155:24:54"
+            },
+            "scope": 52212,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52189,
+            "nodeType": "FunctionDefinition",
+            "src": "1598:99:54",
+            "nodes": [],
+            "documentation": {
+              "id": 52180,
+              "nodeType": "StructuredDocumentation",
+              "src": "1186:407:54",
+              "text": " @notice Callback function that is called by Optimistic Oracle V3 when an assertion is disputed. Used to validate\n if the dispute should be allowed based on the escalation policy.\n @param assertionId the assertionId to validate the dispute for.\n @param disputeCaller the caller of the dispute function.\n @return bool true if the dispute is allowed, false otherwise."
+            },
+            "functionSelector": "6b915d91",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isDisputeAllowed",
+            "nameLocation": "1607:16:54",
+            "parameters": {
+              "id": 52185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52182,
+                  "mutability": "mutable",
+                  "name": "assertionId",
+                  "nameLocation": "1632:11:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52189,
+                  "src": "1624:19:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 52181,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1624:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52184,
+                  "mutability": "mutable",
+                  "name": "disputeCaller",
+                  "nameLocation": "1653:13:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52189,
+                  "src": "1645:21:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52183,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1645:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1623:44:54"
+            },
+            "returnParameters": {
+              "id": 52188,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52187,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52189,
+                  "src": "1691:4:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 52186,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1691:4:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1690:6:54"
+            },
+            "scope": 52212,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52201,
+            "nodeType": "FunctionDefinition",
+            "src": "2237:136:54",
+            "nodes": [],
+            "documentation": {
+              "id": 52190,
+              "nodeType": "StructuredDocumentation",
+              "src": "1703:529:54",
+              "text": " @notice Implements price getting logic. This method is called by Optimistic Oracle V3 settling an assertion that\n is configured to use the escalation manager as the oracle. The interface is constructed to mimic the UMA DVM.\n @param identifier price identifier being requested.\n @param time timestamp of the price being requested.\n @param ancillaryData ancillary data of the price being requested.\n @return price from the escalation manager to inform the resolution of the dispute."
+            },
+            "functionSelector": "719c6d56",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrice",
+            "nameLocation": "2246:8:54",
+            "parameters": {
+              "id": 52197,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52192,
+                  "mutability": "mutable",
+                  "name": "identifier",
+                  "nameLocation": "2272:10:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52201,
+                  "src": "2264:18:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 52191,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2264:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52194,
+                  "mutability": "mutable",
+                  "name": "time",
+                  "nameLocation": "2300:4:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52201,
+                  "src": "2292:12:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52193,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2292:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52196,
+                  "mutability": "mutable",
+                  "name": "ancillaryData",
+                  "nameLocation": "2327:13:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52201,
+                  "src": "2314:26:54",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 52195,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2314:5:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2254:92:54"
+            },
+            "returnParameters": {
+              "id": 52200,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52199,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52201,
+                  "src": "2365:6:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 52198,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2365:6:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2364:8:54"
+            },
+            "scope": 52212,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52211,
+            "nodeType": "FunctionDefinition",
+            "src": "2790:123:54",
+            "nodes": [],
+            "documentation": {
+              "id": 52202,
+              "nodeType": "StructuredDocumentation",
+              "src": "2379:406:54",
+              "text": " @notice Implements price requesting logic for the escalation manager. This function is called by the Optimistic\n Oracle V3 on dispute and is constructed to mimic that of the UMA DVM interface.\n @param identifier the identifier to fetch the price for.\n @param time the time to fetch the price for.\n @param ancillaryData ancillary data of the price being requested."
+            },
+            "functionSelector": "216666a4",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestPrice",
+            "nameLocation": "2799:12:54",
+            "parameters": {
+              "id": 52209,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52204,
+                  "mutability": "mutable",
+                  "name": "identifier",
+                  "nameLocation": "2829:10:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52211,
+                  "src": "2821:18:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 52203,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2821:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52206,
+                  "mutability": "mutable",
+                  "name": "time",
+                  "nameLocation": "2857:4:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52211,
+                  "src": "2849:12:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52205,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2849:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52208,
+                  "mutability": "mutable",
+                  "name": "ancillaryData",
+                  "nameLocation": "2884:13:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52211,
+                  "src": "2871:26:54",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 52207,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2871:5:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2811:92:54"
+            },
+            "returnParameters": {
+              "id": 52210,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2912:0:54"
+            },
+            "scope": 52212,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 52160,
+              "name": "OptimisticOracleV3CallbackRecipientInterface",
+              "nameLocations": [
+                "301:44:54"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 52230,
+              "src": "301:44:54"
+            },
+            "id": 52161,
+            "nodeType": "InheritanceSpecifier",
+            "src": "301:44:54"
+          }
+        ],
+        "canonicalName": "EscalationManagerInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 52159,
+          "nodeType": "StructuredDocumentation",
+          "src": "129:131:54",
+          "text": " @title Escalation Manager Interface\n @notice Interface for contracts that manage the escalation policy for assertions."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          52212,
+          52230
+        ],
+        "name": "EscalationManagerInterface",
+        "nameLocation": "271:26:54",
+        "scope": 52213,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-only"
+  },
+  "id": 54
+}

@@ -1,0 +1,739 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "identifier",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "time",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "ancillaryData",
+          "type": "bytes"
+        }
+      ],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "identifier",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "time",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "ancillaryData",
+          "type": "bytes"
+        }
+      ],
+      "name": "hasPrice",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "identifier",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "time",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "ancillaryData",
+          "type": "bytes"
+        }
+      ],
+      "name": "requestPrice",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getPrice(bytes32,uint256,bytes)": "719c6d56",
+    "hasPrice(bytes32,uint256,bytes)": "b551cd50",
+    "requestPrice(bytes32,uint256,bytes)": "216666a4"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"identifier\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"ancillaryData\",\"type\":\"bytes\"}],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"identifier\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"ancillaryData\",\"type\":\"bytes\"}],\"name\":\"hasPrice\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"identifier\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"ancillaryData\",\"type\":\"bytes\"}],\"name\":\"requestPrice\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface used by financial contracts to interact with the Oracle. Voters will use a different interface.\",\"kind\":\"dev\",\"methods\":{\"getPrice(bytes32,uint256,bytes)\":{\"details\":\"If the price is not available, the method reverts.\",\"params\":{\"ancillaryData\":\"arbitrary data appended to a price request to give the voters more info from the caller.\",\"identifier\":\"uniquely identifies the price requested. eg BTC/USD (encoded as bytes32) could be requested.\",\"time\":\"unix timestamp for the price request.\"},\"returns\":{\"_0\":\"int256 representing the resolved price for the given identifier and timestamp.\"}},\"hasPrice(bytes32,uint256,bytes)\":{\"details\":\"Time must be in the past and the identifier must be supported.\",\"params\":{\"ancillaryData\":\"arbitrary data appended to a price request to give the voters more info from the caller.\",\"identifier\":\"uniquely identifies the price requested. eg BTC/USD (encoded as bytes32) could be requested.\",\"time\":\"unix timestamp for the price request.\"},\"returns\":{\"_0\":\"bool if the DVM has resolved to a price for the given identifier and timestamp.\"}},\"requestPrice(bytes32,uint256,bytes)\":{\"details\":\"Time must be in the past and the identifier must be supported.\",\"params\":{\"ancillaryData\":\"arbitrary data appended to a price request to give the voters more info from the caller.\",\"identifier\":\"uniquely identifies the price requested. eg BTC/USD (encoded as bytes32) could be requested.\",\"time\":\"unix timestamp for the price request.\"}}},\"title\":\"Financial contract facing Oracle interface.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getPrice(bytes32,uint256,bytes)\":{\"notice\":\"Gets the price for `identifier` and `time` if it has already been requested and resolved.\"},\"hasPrice(bytes32,uint256,bytes)\":{\"notice\":\"Whether the price for `identifier` and `time` is available.\"},\"requestPrice(bytes32,uint256,bytes)\":{\"notice\":\"Enqueues a request (if a request isn't already present) for the given `identifier`, `time` pair.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@uma/core/contracts/data-verification-mechanism/interfaces/OracleAncillaryInterface.sol\":\"OracleAncillaryInterface\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@across-protocol/=node_modules/@across-protocol/\",\":@ensdomains/=node_modules/@ensdomains/\",\":@eth-optimism/=node_modules/@across-protocol/contracts/node_modules/@eth-optimism/\",\":@gnosis.pm/=node_modules/@gnosis.pm/\",\":@maticnetwork/=node_modules/@maticnetwork/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@uma/=node_modules/@uma/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@uma/core/contracts/data-verification-mechanism/interfaces/OracleAncillaryInterface.sol\":{\"keccak256\":\"0xd58b41fe1e389f7871db7c04f2c05c1aac1d0455bbc521534da81fd657016a1f\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://cc532e9c550bb1bba0daa33fda748590cd06ce94a9566fe65dac04e7d40977bc\",\"dweb:/ipfs/QmZKvfRW2LJFt5MWZbKuU9ujkXnS2hkPUJVj8wwJWcuZGX\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.16+commit.07a7930e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "identifier",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "ancillaryData",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getPrice",
+          "outputs": [
+            {
+              "internalType": "int256",
+              "name": "",
+              "type": "int256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "identifier",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "ancillaryData",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "hasPrice",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "identifier",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "ancillaryData",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "requestPrice"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getPrice(bytes32,uint256,bytes)": {
+            "details": "If the price is not available, the method reverts.",
+            "params": {
+              "ancillaryData": "arbitrary data appended to a price request to give the voters more info from the caller.",
+              "identifier": "uniquely identifies the price requested. eg BTC/USD (encoded as bytes32) could be requested.",
+              "time": "unix timestamp for the price request."
+            },
+            "returns": {
+              "_0": "int256 representing the resolved price for the given identifier and timestamp."
+            }
+          },
+          "hasPrice(bytes32,uint256,bytes)": {
+            "details": "Time must be in the past and the identifier must be supported.",
+            "params": {
+              "ancillaryData": "arbitrary data appended to a price request to give the voters more info from the caller.",
+              "identifier": "uniquely identifies the price requested. eg BTC/USD (encoded as bytes32) could be requested.",
+              "time": "unix timestamp for the price request."
+            },
+            "returns": {
+              "_0": "bool if the DVM has resolved to a price for the given identifier and timestamp."
+            }
+          },
+          "requestPrice(bytes32,uint256,bytes)": {
+            "details": "Time must be in the past and the identifier must be supported.",
+            "params": {
+              "ancillaryData": "arbitrary data appended to a price request to give the voters more info from the caller.",
+              "identifier": "uniquely identifies the price requested. eg BTC/USD (encoded as bytes32) could be requested.",
+              "time": "unix timestamp for the price request."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "getPrice(bytes32,uint256,bytes)": {
+            "notice": "Gets the price for `identifier` and `time` if it has already been requested and resolved."
+          },
+          "hasPrice(bytes32,uint256,bytes)": {
+            "notice": "Whether the price for `identifier` and `time` is available."
+          },
+          "requestPrice(bytes32,uint256,bytes)": {
+            "notice": "Enqueues a request (if a request isn't already present) for the given `identifier`, `time` pair."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@across-protocol/=node_modules/@across-protocol/",
+        "@ensdomains/=node_modules/@ensdomains/",
+        "@eth-optimism/=node_modules/@across-protocol/contracts/node_modules/@eth-optimism/",
+        "@gnosis.pm/=node_modules/@gnosis.pm/",
+        "@maticnetwork/=node_modules/@maticnetwork/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@uma/=node_modules/@uma/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@uma/core/contracts/data-verification-mechanism/interfaces/OracleAncillaryInterface.sol": "OracleAncillaryInterface"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@uma/core/contracts/data-verification-mechanism/interfaces/OracleAncillaryInterface.sol": {
+        "keccak256": "0xd58b41fe1e389f7871db7c04f2c05c1aac1d0455bbc521534da81fd657016a1f",
+        "urls": [
+          "bzz-raw://cc532e9c550bb1bba0daa33fda748590cd06ce94a9566fe65dac04e7d40977bc",
+          "dweb:/ipfs/QmZKvfRW2LJFt5MWZbKuU9ujkXnS2hkPUJVj8wwJWcuZGX"
+        ],
+        "license": "AGPL-3.0-only"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@uma/core/contracts/data-verification-mechanism/interfaces/OracleAncillaryInterface.sol",
+    "id": 50250,
+    "exportedSymbols": {
+      "OracleAncillaryInterface": [
+        50249
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:2306:47",
+    "nodes": [
+      {
+        "id": 50213,
+        "nodeType": "PragmaDirective",
+        "src": "42:23:47",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 50249,
+        "nodeType": "ContractDefinition",
+        "src": "243:2104:47",
+        "nodes": [
+          {
+            "id": 50224,
+            "nodeType": "FunctionDefinition",
+            "src": "788:129:47",
+            "nodes": [],
+            "documentation": {
+              "id": 50215,
+              "nodeType": "StructuredDocumentation",
+              "src": "292:490:47",
+              "text": " @notice Enqueues a request (if a request isn't already present) for the given `identifier`, `time` pair.\n @dev Time must be in the past and the identifier must be supported.\n @param identifier uniquely identifies the price requested. eg BTC/USD (encoded as bytes32) could be requested.\n @param ancillaryData arbitrary data appended to a price request to give the voters more info from the caller.\n @param time unix timestamp for the price request."
+            },
+            "functionSelector": "216666a4",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestPrice",
+            "nameLocation": "797:12:47",
+            "parameters": {
+              "id": 50222,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50217,
+                  "mutability": "mutable",
+                  "name": "identifier",
+                  "nameLocation": "827:10:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50224,
+                  "src": "819:18:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 50216,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "819:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50219,
+                  "mutability": "mutable",
+                  "name": "time",
+                  "nameLocation": "855:4:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50224,
+                  "src": "847:12:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50218,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "847:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50221,
+                  "mutability": "mutable",
+                  "name": "ancillaryData",
+                  "nameLocation": "882:13:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50224,
+                  "src": "869:26:47",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 50220,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "869:5:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "809:92:47"
+            },
+            "returnParameters": {
+              "id": 50223,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "916:0:47"
+            },
+            "scope": 50249,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "id": 50236,
+            "nodeType": "FunctionDefinition",
+            "src": "1476:145:47",
+            "nodes": [],
+            "documentation": {
+              "id": 50225,
+              "nodeType": "StructuredDocumentation",
+              "src": "923:548:47",
+              "text": " @notice Whether the price for `identifier` and `time` is available.\n @dev Time must be in the past and the identifier must be supported.\n @param identifier uniquely identifies the price requested. eg BTC/USD (encoded as bytes32) could be requested.\n @param time unix timestamp for the price request.\n @param ancillaryData arbitrary data appended to a price request to give the voters more info from the caller.\n @return bool if the DVM has resolved to a price for the given identifier and timestamp."
+            },
+            "functionSelector": "b551cd50",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hasPrice",
+            "nameLocation": "1485:8:47",
+            "parameters": {
+              "id": 50232,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50227,
+                  "mutability": "mutable",
+                  "name": "identifier",
+                  "nameLocation": "1511:10:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50236,
+                  "src": "1503:18:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 50226,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1503:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50229,
+                  "mutability": "mutable",
+                  "name": "time",
+                  "nameLocation": "1539:4:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50236,
+                  "src": "1531:12:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50228,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1531:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50231,
+                  "mutability": "mutable",
+                  "name": "ancillaryData",
+                  "nameLocation": "1566:13:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50236,
+                  "src": "1553:26:47",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 50230,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1553:5:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1493:92:47"
+            },
+            "returnParameters": {
+              "id": 50235,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50234,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50236,
+                  "src": "1615:4:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 50233,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1615:4:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1614:6:47"
+            },
+            "scope": 50249,
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "id": 50248,
+            "nodeType": "FunctionDefinition",
+            "src": "2198:147:47",
+            "nodes": [],
+            "documentation": {
+              "id": 50237,
+              "nodeType": "StructuredDocumentation",
+              "src": "1627:565:47",
+              "text": " @notice Gets the price for `identifier` and `time` if it has already been requested and resolved.\n @dev If the price is not available, the method reverts.\n @param identifier uniquely identifies the price requested. eg BTC/USD (encoded as bytes32) could be requested.\n @param time unix timestamp for the price request.\n @param ancillaryData arbitrary data appended to a price request to give the voters more info from the caller.\n @return int256 representing the resolved price for the given identifier and timestamp."
+            },
+            "functionSelector": "719c6d56",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrice",
+            "nameLocation": "2207:8:47",
+            "parameters": {
+              "id": 50244,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50239,
+                  "mutability": "mutable",
+                  "name": "identifier",
+                  "nameLocation": "2233:10:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50248,
+                  "src": "2225:18:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 50238,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2225:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50241,
+                  "mutability": "mutable",
+                  "name": "time",
+                  "nameLocation": "2261:4:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50248,
+                  "src": "2253:12:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50240,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2253:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50243,
+                  "mutability": "mutable",
+                  "name": "ancillaryData",
+                  "nameLocation": "2288:13:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50248,
+                  "src": "2275:26:47",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 50242,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2275:5:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2215:92:47"
+            },
+            "returnParameters": {
+              "id": 50247,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50246,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50248,
+                  "src": "2337:6:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 50245,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2337:6:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2336:8:47"
+            },
+            "scope": 50249,
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "OracleAncillaryInterface",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 50214,
+          "nodeType": "StructuredDocumentation",
+          "src": "67:175:47",
+          "text": " @title Financial contract facing Oracle interface.\n @dev Interface used by financial contracts to interact with the Oracle. Voters will use a different interface."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          50249
+        ],
+        "name": "OracleAncillaryInterface",
+        "nameLocation": "261:24:47",
+        "scope": 50250,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-only"
+  },
+  "id": 47
+}
