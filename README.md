@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+This project is done during the time of ETHglobal Online Hackathon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CarbonUMArket
 
-## Available Scripts
+This project is based on the tutorial `https://docs.uma.xyz/developers/optimistic-oracle-v3/prediction-market`.
 
-In the project directory, you can run:
+The goal is to create a transparent and verifiable Carbon Credit Market.
 
-### `npm start`
+To do this we employ the `Optimistic Oracle V3` technology of `https://docs.uma.xyz/`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The structure of the market is composed of three parties.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The first one is the Issuer who issues the carbon market in exchange for money and reward for anyone auditing the market (In the simplest case, if anyone proves that they cannot deliver the number of carbon credits issued).
 
-### `npm test`
+The second one is the Clients who want to buy some carbon credits.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The third one is the Validators who can audit the credits and get rewards if they can prove that the issuer doesn't fulfill their promise corresponding to the number of carbon credits emitted.
 
-### `npm run build`
+There are three market phases: 
+1. Phase 0 - Opening market period: Clients can buy carbon credits. At that period, they could only buy convertible carbon credit.
+2. Phase 1 - Auditing period: Validators audits the market and declares false promise if the issuer cannot fulfill their promise according to the number of carbon credits they emit
+3. Phase 2 - Settling period: The clients and validators collect their credits and the reward.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+During the opening market period, clients can buy some convertible carbon credits, which can be converted to carbon credits if, after phase 1, it is proved that the issuer fulfills their promise (absorb the promised number of carbon emissions).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+During the auditing period: Validators can join together to add evidence if they find that the issuer cannot deliver promised carbon credits. If they do, they assert that statement to OOV3. If it is found that the assertion is truthful, they collect the reward, and the convertible carbon credits are burnt (lose their value). On the contrary, the assertion is not false, they don't get the reward and the issuer by default successfully delivers his/her promise. On the other hand, if they don't find the evidence, they do nothing, and by default, the issuer fulfills their promise.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+During the settling period: If the issuer truthfully delivers their carbon credit, clients can exchange convertible carbon credits to actual carbon credits. If he/she don't, which is equivalent to the validators' assertion being verified,  can cash out the reward.
 
-### `npm run eject`
+==========================================================
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+For this project, I intend to create a web app that interacts with the smart contract deployed in the scroll sepolia testnet but it is not finished.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To start the website, run `npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
