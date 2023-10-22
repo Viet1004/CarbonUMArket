@@ -1,0 +1,34 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "test/Interaction.t.sol",
+    "id": 54235,
+    "exportedSymbols": {},
+    "nodeType": "SourceUnit",
+    "src": "42:2526:65",
+    "nodes": [
+      {
+        "id": 54234,
+        "nodeType": "PragmaDirective",
+        "src": "42:24:65",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".12"
+        ]
+      }
+    ],
+    "license": "AGPL-3.0-only"
+  },
+  "id": 65
+}

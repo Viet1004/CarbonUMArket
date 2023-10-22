@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { AppStorage } from '../../../lib/storage.ts';
 import { Modal, Upload } from 'antd';
 import "../../css/ValidatorSpace/ValidatorSpace.css";
+import CarbonUMArket from '../../../abi/CarbonUMArket.json';
+
 const { PlusOutlined } = require('@ant-design/icons');
 
 

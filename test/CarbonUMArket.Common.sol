@@ -8,17 +8,16 @@ import "../contracts/CarbonUMArket.sol";
 contract CarbonUMArketTestCommon is CommonOptimisticOracleV3Test {
     CarbonUMArket public carbonUMArket;
     string description = "This is a project in Brazil";
-    uint256 reward = 1000e18;
+    uint256 reward = 1000e12;
     uint256 requiredBond;
     uint256 creditCap = 10000;
-    uint256 marketOpeningPeriod = 120;
-    uint256 examinationPeriod = 60;
 
     function _commonCarbonUMArketSetUp() public {
         _commonSetup();
-        carbonUMArket = new CarbonUMArket(address(finder), address(defaultCurrency), address(optimisticOracleV3));
+        // carbonUMArket = new CarbonUMArket(address(finder), address(defaultCurrency), address(optimisticOracleV3));
+        carbonUMArket = new CarbonUMArket(address(defaultCurrency), address(optimisticOracleV3));
         uint256 minimumBond = optimisticOracleV3.getMinimumBond(address(defaultCurrency));
-        requiredBond = minimumBond < 1000e18 ? 1000e18 : minimumBond; // Make sure the bond is sufficient.
+        requiredBond = minimumBond < 1000e12 ? 1000e12 : minimumBond; // Make sure the bond is sufficient.
         _fundInitializationReward();
     }
 
@@ -36,7 +35,7 @@ contract CarbonUMArketTestCommon is CommonOptimisticOracleV3Test {
     function _initializeMarket() internal returns (bytes32) {
         _fundInitializationReward();
         vm.prank(TestAddress.owner);
-        return carbonUMArket.initializeMarket(reward, requiredBond, creditCap, description, marketOpeningPeriod, examinationPeriod);
+        return carbonUMArket.initializeMarket(reward, requiredBond, creditCap, description);
     }
 
     function _fundAssertionBond() internal {
@@ -53,9 +52,9 @@ contract CarbonUMArketTestCommon is CommonOptimisticOracleV3Test {
     }
 
     function _fundCurrencyForMinting(address account) internal {
-        defaultCurrency.allocateTo(account, 2 * creditCap * 1e18);
+        defaultCurrency.allocateTo(account, 2 * creditCap * 1e12);
         vm.prank(account);
-        defaultCurrency.approve(address(carbonUMArket), 2 * creditCap * 1e18);
+        defaultCurrency.approve(address(carbonUMArket), 2 * creditCap * 1e12);
     }
 
     function _mintCredits(bytes32 marketId) internal {
@@ -83,12 +82,12 @@ contract CarbonUMArketTestCommon is CommonOptimisticOracleV3Test {
         assertTrue(optimisticOracleV3.settleAndGetAssertionResult(assertionId));
         // Settle the outcome tokens.
         vm.prank(TestAddress.account2);
-        carbonUMArket.settleMarket(marketId);
+        carbonUMArket.settleMarket(marketId, 0);
         assertEq(IERC20(market.validatorToken).balanceOf(TestAddress.account3), 1);
         assertTrue(market.promiseDelivered);
         
         vm.prank(TestAddress.account3);
-        carbonUMArket.settleMarket(marketId);
+        carbonUMArket.settleMarket(marketId, 10000);
 
         // Verify the outcome tokens were burned.
         assertEq(IERC20(market.convertibleCarbonCredit).balanceOf(TestAddress.account2), 0);

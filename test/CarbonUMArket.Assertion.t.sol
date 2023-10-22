@@ -49,7 +49,7 @@ contract CarbonUMArketAssertionTest is CarbonUMArketTestCommon {
         _fundInitializationReward();
         vm.roll(block.number + 1);
         vm.prank(TestAddress.owner);
-        bytes32 secondMarketId = carbonUMArket.initializeMarket( reward, 0, creditCap, description, marketOpeningPeriod, examinationPeriod);
+        bytes32 secondMarketId = carbonUMArket.initializeMarket( reward, 0, creditCap, description);
         uint256 ooBalanceBefore = defaultCurrency.balanceOf(address(optimisticOracleV3));
         uint256 minimumBond = optimisticOracleV3.getMinimumBond(address(defaultCurrency));
 

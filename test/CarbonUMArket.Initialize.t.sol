@@ -8,7 +8,7 @@ contract CarbonUMArketInitializeTest is CarbonUMArketTestCommon {
     }
 
     function test_ContractParameters() public {
-        assertEq(address(carbonUMArket.finder()), address(finder));
+        // assertEq(address(carbonUMArket.finder()), address(finder));
         assertEq(address(carbonUMArket.currency()), address(defaultCurrency));
         assertEq(address(carbonUMArket.oo()), address(optimisticOracleV3));
         assertEq(carbonUMArket.defaultIdentifier(), defaultIdentifier);
@@ -17,31 +17,31 @@ contract CarbonUMArketInitializeTest is CarbonUMArketTestCommon {
 
     function test_RevertIf_DuplicateMarket() public {
         vm.prank(TestAddress.owner);
-        carbonUMArket.initializeMarket(reward, requiredBond, creditCap, description, marketOpeningPeriod, examinationPeriod);
+        carbonUMArket.initializeMarket(reward, requiredBond, creditCap, description);
 
         _fundInitializationReward();
         vm.expectRevert("Market already exists");
         vm.prank(TestAddress.owner);
-        carbonUMArket.initializeMarket(reward, requiredBond, creditCap, description, marketOpeningPeriod, examinationPeriod);
+        carbonUMArket.initializeMarket(reward, requiredBond, creditCap, description);
     }
 
     function test_DuplicateMarketNextBlock() public {
         vm.prank(TestAddress.owner);
         bytes32 firstMarketId =
-            carbonUMArket.initializeMarket(reward, requiredBond, creditCap, description, marketOpeningPeriod, examinationPeriod);
+            carbonUMArket.initializeMarket(reward, requiredBond, creditCap, description);
 
         // Next block should allow initializing market with the same parameters, but different marketId.
         vm.roll(block.number + 1);
         _fundInitializationReward();
         vm.prank(TestAddress.owner);
         bytes32 secondMarketId =
-            carbonUMArket.initializeMarket(reward, requiredBond, creditCap, description, marketOpeningPeriod, examinationPeriod);
+            carbonUMArket.initializeMarket(reward, requiredBond, creditCap, description);
         assertFalse(firstMarketId == secondMarketId);
     }
 
     function test_RewardPulledOnInitialization() public {
         vm.prank(TestAddress.owner);
-        carbonUMArket.initializeMarket(reward, requiredBond, creditCap, description, marketOpeningPeriod, examinationPeriod);
+        carbonUMArket.initializeMarket(reward, requiredBond, creditCap, description);
         assertEq(defaultCurrency.balanceOf(address(carbonUMArket)), requiredBond);
     }
 }

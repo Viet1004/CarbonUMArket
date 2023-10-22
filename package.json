@@ -8,10 +8,13 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@uma/core": "^2.56.0",
+    "antd": "^5.10.2",
     "ethereum-cryptography": "2.0",
     "ethers": "^5.7.2",
+    "ipfs-http-client": "^60.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.17.0",
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },

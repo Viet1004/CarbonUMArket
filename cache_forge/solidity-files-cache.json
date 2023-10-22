@@ -13,8 +13,8 @@
   },
   "files": {
     "contracts/CarbonUMArket.sol": {
-      "lastModificationDate": 1697845520430,
-      "contentHash": "7dd118943b505bef1d0d93fbafbafc20",
+      "lastModificationDate": 1697932574186,
+      "contentHash": "b4f50e9398fd70208befb33448464c24",
       "sourceName": "contracts/CarbonUMArket.sol",
       "solcConfig": {
         "settings": {
@@ -46,7 +46,6 @@
         }
       },
       "imports": [
-        "contracts/DataAsserter.sol",
         "node_modules/@openzeppelin/contracts/access/Ownable.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
@@ -2741,8 +2740,8 @@
       }
     },
     "script/CarbonUMArket.s.sol": {
-      "lastModificationDate": 1697897748342,
-      "contentHash": "e88bea3a5d4f8038011663cc429106b7",
+      "lastModificationDate": 1697899183041,
+      "contentHash": "5e563433a310a271f8aac5bca6d2be53",
       "sourceName": "script/CarbonUMArket.s.sol",
       "solcConfig": {
         "settings": {
@@ -2775,7 +2774,6 @@
       },
       "imports": [
         "contracts/CarbonUMArket.sol",
-        "contracts/DataAsserter.sol",
         "lib/forge-std/src/Base.sol",
         "lib/forge-std/src/Script.sol",
         "lib/forge-std/src/StdChains.sol",
@@ -2985,8 +2983,8 @@
       }
     },
     "test/CarbonUMArket.Assertion.t.sol": {
-      "lastModificationDate": 1697845505690,
-      "contentHash": "c5ba569f11da4e40c28f874843298ff7",
+      "lastModificationDate": 1697904266631,
+      "contentHash": "5c180ca651f0f770c32a33832b7e6d0c",
       "sourceName": "test/CarbonUMArket.Assertion.t.sol",
       "solcConfig": {
         "settings": {
@@ -3019,7 +3017,6 @@
       },
       "imports": [
         "contracts/CarbonUMArket.sol",
-        "contracts/DataAsserter.sol",
         "lib/forge-std/lib/ds-test/src/test.sol",
         "lib/forge-std/src/Base.sol",
         "lib/forge-std/src/StdAssertions.sol",
@@ -3094,8 +3091,8 @@
       }
     },
     "test/CarbonUMArket.Common.sol": {
-      "lastModificationDate": 1697845505690,
-      "contentHash": "97dd0b9c669995ffb9041a9b1d79ab4c",
+      "lastModificationDate": 1697932637536,
+      "contentHash": "ec5513a31f8846c221f1473cc260de40",
       "sourceName": "test/CarbonUMArket.Common.sol",
       "solcConfig": {
         "settings": {
@@ -3128,7 +3125,6 @@
       },
       "imports": [
         "contracts/CarbonUMArket.sol",
-        "contracts/DataAsserter.sol",
         "lib/forge-std/lib/ds-test/src/test.sol",
         "lib/forge-std/src/Base.sol",
         "lib/forge-std/src/StdAssertions.sol",
@@ -3202,8 +3198,8 @@
       }
     },
     "test/CarbonUMArket.Initialize.t.sol": {
-      "lastModificationDate": 1697845505690,
-      "contentHash": "5ab5834adc8887135918382c55ef96cd",
+      "lastModificationDate": 1697904224561,
+      "contentHash": "a55ec756d5ca845b570b1b0075d14a7d",
       "sourceName": "test/CarbonUMArket.Initialize.t.sol",
       "solcConfig": {
         "settings": {
@@ -3236,7 +3232,6 @@
       },
       "imports": [
         "contracts/CarbonUMArket.sol",
-        "contracts/DataAsserter.sol",
         "lib/forge-std/lib/ds-test/src/test.sol",
         "lib/forge-std/src/Base.sol",
         "lib/forge-std/src/StdAssertions.sol",
@@ -3311,8 +3306,8 @@
       }
     },
     "test/CarbonUMArket.Position.t.sol": {
-      "lastModificationDate": 1697845505690,
-      "contentHash": "1fe8c4c15eaa4efa8b98be898a94ad1c",
+      "lastModificationDate": 1697932638996,
+      "contentHash": "8427cc58570cb81b4d8b4e547a0fe658",
       "sourceName": "test/CarbonUMArket.Position.t.sol",
       "solcConfig": {
         "settings": {
@@ -3345,7 +3340,6 @@
       },
       "imports": [
         "contracts/CarbonUMArket.sol",
-        "contracts/DataAsserter.sol",
         "lib/forge-std/lib/ds-test/src/test.sol",
         "lib/forge-std/src/Base.sol",
         "lib/forge-std/src/StdAssertions.sol",
@@ -3420,8 +3414,8 @@
       }
     },
     "test/CarbonUMArket.Resolve.t.sol": {
-      "lastModificationDate": 1697845505690,
-      "contentHash": "3b54953ce56f3aca2500e77de3dd9cc0",
+      "lastModificationDate": 1697907821980,
+      "contentHash": "a20d9c80ea4ff92f9e424e11bfc76b76",
       "sourceName": "test/CarbonUMArket.Resolve.t.sol",
       "solcConfig": {
         "settings": {
@@ -3454,7 +3448,6 @@
       },
       "imports": [
         "contracts/CarbonUMArket.sol",
-        "contracts/DataAsserter.sol",
         "lib/forge-std/lib/ds-test/src/test.sol",
         "lib/forge-std/src/Base.sol",
         "lib/forge-std/src/StdAssertions.sol",
@@ -3636,8 +3629,8 @@
       }
     },
     "test/Interaction.t.sol": {
-      "lastModificationDate": 1697845505680,
-      "contentHash": "76e156a50403dae62f2cd9a328fc3c7f",
+      "lastModificationDate": 1697906543460,
+      "contentHash": "2f85398ee4c234b07e95501732f0794a",
       "sourceName": "test/Interaction.t.sol",
       "solcConfig": {
         "settings": {
@@ -3668,79 +3661,11 @@
           "libraries": {}
         }
       },
-      "imports": [
-        "contracts/CarbonUMArket.sol",
-        "contracts/DataAsserter.sol",
-        "lib/forge-std/lib/ds-test/src/test.sol",
-        "lib/forge-std/src/Base.sol",
-        "lib/forge-std/src/StdAssertions.sol",
-        "lib/forge-std/src/StdChains.sol",
-        "lib/forge-std/src/StdCheats.sol",
-        "lib/forge-std/src/StdError.sol",
-        "lib/forge-std/src/StdInvariant.sol",
-        "lib/forge-std/src/StdJson.sol",
-        "lib/forge-std/src/StdMath.sol",
-        "lib/forge-std/src/StdStorage.sol",
-        "lib/forge-std/src/StdStyle.sol",
-        "lib/forge-std/src/StdUtils.sol",
-        "lib/forge-std/src/Test.sol",
-        "lib/forge-std/src/Vm.sol",
-        "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol",
-        "lib/forge-std/src/interfaces/IMulticall3.sol",
-        "lib/forge-std/src/safeconsole.sol",
-        "node_modules/@openzeppelin/contracts/access/Ownable.sol",
-        "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
-        "node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
-        "node_modules/@openzeppelin/contracts/utils/Address.sol",
-        "node_modules/@openzeppelin/contracts/utils/Context.sol",
-        "node_modules/@openzeppelin/contracts/utils/Strings.sol",
-        "node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol",
-        "node_modules/@openzeppelin/contracts/utils/math/SignedSafeMath.sol",
-        "node_modules/@uma/core/contracts/common/implementation/AddressWhitelist.sol",
-        "node_modules/@uma/core/contracts/common/implementation/AncillaryData.sol",
-        "node_modules/@uma/core/contracts/common/implementation/ExpandedERC20.sol",
-        "node_modules/@uma/core/contracts/common/implementation/FixedPoint.sol",
-        "node_modules/@uma/core/contracts/common/implementation/Lockable.sol",
-        "node_modules/@uma/core/contracts/common/implementation/MultiCaller.sol",
-        "node_modules/@uma/core/contracts/common/implementation/MultiRole.sol",
-        "node_modules/@uma/core/contracts/common/implementation/Testable.sol",
-        "node_modules/@uma/core/contracts/common/implementation/TestnetERC20.sol",
-        "node_modules/@uma/core/contracts/common/implementation/Timer.sol",
-        "node_modules/@uma/core/contracts/common/implementation/Withdrawable.sol",
-        "node_modules/@uma/core/contracts/common/interfaces/AddressWhitelistInterface.sol",
-        "node_modules/@uma/core/contracts/common/interfaces/ExpandedIERC20.sol",
-        "node_modules/@uma/core/contracts/data-verification-mechanism/implementation/Constants.sol",
-        "node_modules/@uma/core/contracts/data-verification-mechanism/implementation/Finder.sol",
-        "node_modules/@uma/core/contracts/data-verification-mechanism/implementation/IdentifierWhitelist.sol",
-        "node_modules/@uma/core/contracts/data-verification-mechanism/implementation/Store.sol",
-        "node_modules/@uma/core/contracts/data-verification-mechanism/interfaces/FinderInterface.sol",
-        "node_modules/@uma/core/contracts/data-verification-mechanism/interfaces/IdentifierWhitelistInterface.sol",
-        "node_modules/@uma/core/contracts/data-verification-mechanism/interfaces/OracleAncillaryInterface.sol",
-        "node_modules/@uma/core/contracts/data-verification-mechanism/interfaces/StoreInterface.sol",
-        "node_modules/@uma/core/contracts/data-verification-mechanism/test/MockOracleAncillary.sol",
-        "node_modules/@uma/core/contracts/optimistic-oracle-v3/implementation/ClaimData.sol",
-        "node_modules/@uma/core/contracts/optimistic-oracle-v3/implementation/OptimisticOracleV3.sol",
-        "node_modules/@uma/core/contracts/optimistic-oracle-v3/implementation/test/AssertingCallerTest.sol",
-        "node_modules/@uma/core/contracts/optimistic-oracle-v3/implementation/test/OptimisticOracleV3Test.sol",
-        "node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/EscalationManagerInterface.sol",
-        "node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/OptimisticOracleV3CallbackRecipientInterface.sol",
-        "node_modules/@uma/core/contracts/optimistic-oracle-v3/interfaces/OptimisticOracleV3Interface.sol",
-        "test/CarbonUMArket.Common.sol",
-        "test/common/CommonOptimisticOracleV3Test.sol",
-        "test/fixtures/common/CommonTestBase.sol",
-        "test/fixtures/common/TestAddress.sol",
-        "test/fixtures/common/TimerFixture.sol",
-        "test/fixtures/dvm/BaseDvmFixture.sol",
-        "test/fixtures/dvm/MockDvmFixture.sol",
-        "test/fixtures/optimistic-oracle-v3/OptimisticOracleV3Fixture.sol"
-      ],
+      "imports": [],
       "versionRequirement": "^0.8.12",
       "artifacts": {
-        "InteractionTest": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Interaction.t.sol/InteractionTest.json"
+        "Interaction.t": {
+          "0.8.16+commit.07a7930e.Linux.gcc": "Interaction.t.sol/Interaction.t.json"
         }
       }
     },

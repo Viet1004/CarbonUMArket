@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 pragma solidity ^0.8.0;
 import "./CarbonUMArket.Common.sol";
+import "forge-std/console.sol";
+
 
 contract CarbonUMArketResolveTest is CarbonUMArketTestCommon {
     bytes32 marketId;
@@ -32,8 +34,7 @@ contract CarbonUMArketResolveTest is CarbonUMArketTestCommon {
         assertTrue(carbonUMArket.getMarket(marketId).marketState == 2);
         // Verify the amount of CarbonCredit of account2
         vm.prank(TestAddress.account2);
-
-        carbonUMArket.settleMarket(marketId);
+        carbonUMArket.settleMarket(marketId, 0);
         assertEq(IERC20(market.carbonCredit).balanceOf(TestAddress.account2), 0);
         
     }
@@ -65,12 +66,12 @@ contract CarbonUMArketResolveTest is CarbonUMArketTestCommon {
 
         // Verify the amount of CarbonCredit of account2
         vm.prank(TestAddress.account2);
-        carbonUMArket.settleMarket(marketId);
+        carbonUMArket.settleMarket(marketId, 0);
         assertEq(IERC20(market.carbonCredit).balanceOf(TestAddress.account2), 0);
 
         // Verify the balance of validator doesn't change
         vm.prank(TestAddress.account3);
-        carbonUMArket.settleMarket(marketId);
+        carbonUMArket.settleMarket(marketId, 10000);
         assertEq(defaultCurrency.balanceOf(TestAddress.account3), validatorBalanceBefore + market.reward);
 
     }
@@ -103,12 +104,15 @@ contract CarbonUMArketResolveTest is CarbonUMArketTestCommon {
 
         // Verify the amount of CarbonCredit of account2
         vm.prank(TestAddress.account2);
-        carbonUMArket.settleMarket(marketId);
+        carbonUMArket.settleMarket(marketId, 0);
+
         assertEq(IERC20(market.carbonCredit).balanceOf(TestAddress.account2), creditCap / 2);
 
         // Verify the balance of validator doesn't change
         vm.prank(TestAddress.account3);
-        carbonUMArket.settleMarket(marketId);
+        carbonUMArket.settleMarket(marketId, 10000);
+        console.log("validatorBalanceBefore", validatorBalanceBefore);
+        console.log(defaultCurrency.balanceOf(TestAddress.account3));
         assertEq(defaultCurrency.balanceOf(TestAddress.account3), validatorBalanceBefore);
 
     }

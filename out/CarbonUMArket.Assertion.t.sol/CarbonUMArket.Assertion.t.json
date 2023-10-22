@@ -1,0 +1,21 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "test/CarbonUMArket.Assertion.t.sol",
+    "id": 1,
+    "exportedSymbols": {},
+    "nodeType": "SourceUnit",
+    "src": "3136:0:0",
+    "nodes": [],
+    "license": "AGPL-3.0-only"
+  },
+  "id": 0
+}

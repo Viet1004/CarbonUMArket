@@ -22,7 +22,7 @@ contract CarbonUMArketPositionTest is CarbonUMArketTestCommon {
     //    _mintCredits(marketId);
         vm.prank(TestAddress.account2);
         carbonUMArket.mintCredit(marketId, creditCap / 2);
-        assertEq(defaultCurrency.balanceOf(TestAddress.account2), minterBalanceBefore - creditCap * 1e18 / 2 );
+        assertEq(defaultCurrency.balanceOf(TestAddress.account2), minterBalanceBefore - creditCap * 1e12 / 2 );
         assertEq(IERC20(market.convertibleCarbonCredit).balanceOf(TestAddress.account2), creditCap  / 2);
     
         vm.expectRevert(bytes(string.concat("Only ", Strings.toString(creditCap - creditCap / 2), " tokens left!")));
@@ -41,7 +41,8 @@ contract CarbonUMArketPositionTest is CarbonUMArketTestCommon {
         _assertMarket(marketId);
 
         vm.expectRevert("Market not ready for settle!");
-        carbonUMArket.settleMarket(marketId);
+        vm.prank(TestAddress.account1);
+        carbonUMArket.settleMarket(marketId, 0);
 
     }
 
